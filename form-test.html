@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Telegram form test</title>
+<h1>Test form → telegram.php</h1>
+<form method="post" action="telegram.php">
+  <label>Имя <input name="name" required></label><br>
+  <label>Телефон <input name="phone" required value="+7(999)999-99-99"></label><br>
+  <label>Услуга <input name="service" value="Тестовая услуга"></label><br>
+  <label>Устройство <input name="device" value="ПК"></label><br>
+  <label>Комментарий <input name="message" value="Проверка"></label><br>
+  <button type="submit">Отправить</button>
+</form>
+<p>Если это работает, значит Telegram на сервере ок.</p>

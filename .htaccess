@@ -1,0 +1,15 @@
+# Vite public → goes to dist root
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Catch-all POST to telegram.php if target isn't a real file/dir
+  RewriteCond %{REQUEST_METHOD} POST
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ telegram.php [L,QSA]
+</IfModule>
+AddDefaultCharset UTF-8
+DirectoryIndex index.html index.php
+Options -Indexes
+<Files "config.php">
+  Require all denied
+</Files>
